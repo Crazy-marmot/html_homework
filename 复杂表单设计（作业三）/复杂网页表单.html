@@ -1,0 +1,185 @@
+<html lang='zh'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <script type='text/javascript'>
+        window.onload = function () {
+            var txt = document.getElementsByTagName("input");
+            for (let index = 0; index < txt.length; index++) {
+                txt[index].onfocus = function () {
+                    txt[index].value = '';
+                }
+            }
+        }
+    </script>
+    <style type='text/css'>
+        @import url(style.css);
+    </style>
+    <title>复杂表单设计</title>
+</head>
+
+<body>
+    <details open>
+        <summary>基本信息</summary>
+        <table cellspacing='13'>
+            <tr>
+                <td class='td_em'><span class='necessary_flag'>*</span><em>专家姓名 </em></td>
+                <td class='td_input'><input class='input1' type='text' name="expert name" placeholder='0/20'
+                        maxlength='20'>
+                </td>
+                <td class='td_em'><span class='necessary_flag'>*</span><em>常用手机号码 </em></td>
+                <td class='td_input'><input class='input1' type='text' name='personal number'
+                        placeholder='默认为登录账号，密码为手机号后六位　　0/15' maxlength='15'>
+                </td>
+            </tr>
+            <tr>
+                <td class='td_em'><span class='necessary_flag'>*</span><em>工作单位 </em></td>
+                <td class='td_input'><input class='input1' type='text' 　name='workplace' placeholder='0/20'
+                        maxlength='20'>
+                </td>
+                <td class='td_em'><span class='necessary_flag'>*</span><em>专家职称
+                    </em></td>
+                <td class='td_select'><select class='professional title' style="font-size: xx-small">
+                        <option disabled selected hidden value="">请选择&nbsp&nbsp</option>
+                        <option value='讲师'> 讲师&nbsp&nbsp</option>
+                        <option value='副教授'> 副教授&nbsp&nbsp</option>
+                        <option value='教授'> 教授&nbsp&nbsp</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td class='td_em'><em> 是否是辅导
+                    </em></td>
+                <td class='td_select'><select name='是否是辅导' style='font-size: xx-small'>
+                        <option disabled selected hidden value="">请选择&nbsp&nbsp</option>
+                        <option value='是'>是&nbsp&nbsp</option>
+                        <option value='否'>否&nbsp&nbsp</option>
+                    </select>
+                </td>
+                <td class='td_em'><em> 最高学位
+                    </em></td>
+                <td class='td_select'><select name='highest degree' style='font-size: xx-small'>
+                        <option disabled selected hidden value="">请选择&nbsp&nbsp</option>
+                        <option value='博士后'>博士后&nbsp&nbsp</option>
+                        <option value='博士'>博士&nbsp&nbsp</option>
+                        <option value='硕士'>硕士&nbsp&nbsp</option>
+                        <option value='本科'>本科&nbsp&nbsp</option>
+                        <option value='其它'>其它&nbsp&nbsp</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td class='td_em'><em> 电子邮件</em></td>
+                <td class='td_input'><input class='input1' type='text' 　name='Email adress' placeholder='0/20'
+                        maxlength='20'>
+                </td>
+                <td class='td_em'><em> 办公电话</em></td>
+                <td class='td_input'><input class='input1' type='text' name='office phone' placeholder='0/6'
+                        maxlength='6'>
+                </td>
+            </tr>
+            <tr>
+                <td class='td_em'><em> 办公通讯地址 </em></td>
+                <td class='td_input'><input class='input1' type='text' 　name='postal adress' placeholder='0/20'
+                        maxlength='20'>
+                </td>
+                <td class='td_em'><em> 邮编 </em></td>
+                <td class='td_input'><input class='input1' type='text' name='postcode' placeholder='0/6' maxlength='6'>
+                </td>
+            </tr>
+            <tr>
+                <td class='td_em'><em> 专家类别</em></td>
+                <td class='td_input'><input class='input1' type='text' name='Expert category' placeholder='0/10'
+                        maxlength='10'>
+                </td>
+            </tr>
+        </table>
+    </details>
+    <hr />
+    <details>
+        <summary>拓展信息</summary>
+        <table cellspacing='13'>
+            <tr>
+                <td class='td_em'><em> 生日</em></td>
+                <td class='td_input'><input class='input2' type='date' name='birthday'></td>
+                <td class='td_em'><em> 性别</em></td>
+                <td><input class='checkbox' type='radio' name='sex'><em class='sex'>男</em></td>
+                <td><input class='checkbox' type='radio' name='sex'><em class='sex'>女</em></td>
+                <td class='null'><span>　　　　　</span></td>
+                <td class='null'><span>　　　　　</span></td>
+            </tr>
+            <tr>
+                <td class='td_em'><em> 国籍</em></td>
+                <td class='td_input'><input class='input2' type='text' 　name='nationality' placeholder='0/10'
+                        maxlength='10'>
+                </td>
+                <td class='td_em'><em> 民族</em></td>
+                <td class='td_input' colspan='4'><input class='input2' type='text' name='nation' placeholder='0/10'
+                        maxlength='10'>
+                </td>
+            </tr>
+            <tr>
+                <td class='td_em'><em> 证件类型
+                    </em></td>
+                <td class='td_select'><select name='certificate type' style='font-size: xx-small'>
+                        <option disabled selected hidden value="">请选择</option>
+                        <option value='居民身份证'>居民身份证</option>
+                        <option value='临时身份证'>临时身份证</option>
+                        <option value='港澳居民来往内地通行证'>港澳居民来往内地通行证</option>
+                    </select>
+                </td>
+                <td class='td_em'><em> 证件号</em></td>
+                <td class='td_input' colspan='4'><input class='input2' type='text' name='certificate number'
+                        placeholder='0/15' maxlength='15'>
+                </td>
+                </td>
+            </tr>
+            <tr>
+                <td class='td_em'><em> 政治面貌
+                    </em></td>
+                <td class='td_select'><select name='Political status' style='font-size: xx-small'>
+                        <option disabled selected hidden value="">请选择&nbsp&nbsp</option>
+                        <option value='共产党员'>共产党员&nbsp&nbsp</option>
+                        <option value='共青团员'>共青团员&nbsp&nbsp</option>
+                        <option value='群众'>群众&nbsp&nbsp</option>
+                        <option value='其他'>其他&nbsp&nbsp</option>
+                    </select>
+                </td>
+                <td class='td_em'><em> 所在部门</em></td>
+                <td class='td_input' colspan='4'><input class='input2' type='text' name='apartment' placeholder='0/20'
+                        maxlength='20'></td>
+                </td>
+            </tr>
+            <tr>
+                <td class='td_em'><em> 行政职务</em></td>
+                <td class='td_input'><input class='input2' type='text' 　name='Administrative duties' placeholder='0/20'
+                        maxlength='20'>
+                </td>
+                
+                <td class='td_em'><em> 主要社会兼职</em></td>
+                <td colspan="4"><textarea placeholder="0/20" name="part-time job" cols="" rows="2"></textarea></td>
+            </tr>
+            <tr>
+                <td class='td_em'><em> 传真电话</em></td>
+                <td class='td_input'><input class='input2' type='text' 　name='faxaphone' placeholder='0/15'
+                        maxlength='15'>
+                </td>
+                <td class='td_em'><em> 住宅电话</em></td>
+                <td class='td_input' colspan='4'><input class='input2' type='text' name='residential telephone'
+                        placeholder='0/20' maxlength='20'>
+                </td>
+            </tr>
+            <tr>
+                <td class='td_em'><em> 备用邮箱</em></td>
+                <td class='td_input'><input class='input2' type='text' 　name='reserve Email' placeholder='0/15'
+                        maxlength='20'>
+                </td>
+            </tr>
+        </table>
+    </details>
+
+</body>
+
+</html>
